@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RateMyCourse</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="/static/servicesstyles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/static/logo.png" />
+        <h2>RateMycourse</h2>
+      </div>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <button class="btnLogin-popup">Login</button>
+      </nav>
+    </header>
+    <div class="overlay">
+      <div class="wrapper">
+        <span class="icon-close">
+          <ion-icon name="close" id="closeBtn"></ion-icon>
+        </span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#" name="login_form">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" name="email" required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" name="password" required />
+              <label for="password">Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember me</label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form action="#" name="signup_form" id="signupForm">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" name="name" required />
+              <label for="name">Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" name="email" required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" name="password" required />
+              <label for="password">Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label
+                ><input type="checkbox" required />I agree to the terms &
+                conditions</label
+              >
+            </div>
+            <p class="error error-hidden" style="text-align: center"></p>
+            <button type="submit" class="btn" value="Sign Up">Register</button>
+            <div class="login-register">
+              <p>
+                Already have an account?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-container">
+      <h1>Top Courses in Computer Science Fields</h1>
+
+      <div class="field-section">
+        <h2>Web Development</h2>
+        <ul class="course-list">
+          <li>
+            <h3>
+              <a
+                href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                target="_blank"
+                >1. The Complete Web Developer Bootcamp</a
+              >
+            </h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
+                target="_blank"
+                >2. Front-End Web Developer Nanodegree</a
+              >
+            </h3>
+            <p>Provider: Udacity</p>
+          </li>
+          <li>
+            <h3>
+              <a href="https://www.freecodecamp.org/learn/" target="_blank"
+                >3. Responsive Web Design Certification (Free)</a
+              >
+            </h3>
+            <p>Provider: freeCodeCamp</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer?utm_medium=sem&utm_source=gg&utm_campaign=b2c_india_ibm-full-stack-cloud-developer_ibm_ftcof_professional-certificates_arte_oct-23_dr_pmax_gads_lg-all&campaignid=20607561057&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=CjwKCAjwg-24BhB_EiwA1ZOx8mxJ-2evG18K08BSKoqFwuC5mLqIOIqt4o3RsUiCipg8CUuOHhgE0hoC0icQAvD_BwE"
+                target="_blank"
+                >4. Full-Stack Web Development Specialization (Free)</a
+              >
+            </h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/"
+                target="_blank"
+                >5. JavaScript - The Complete Guide</a
+              >
+            </h3>
+            <p>Provider: Udemy</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data Analytics Section -->
+      <div class="field-section">
+        <h2>Data Analytics</h2>
+        <ul class="course-list">
+          <li>
+            <h3>
+              <a
+                href="https://www.coursera.org/professional-certificates/google-data-analytics"
+                target="_blank"
+                >1. Google Data Analytics Professional Certificate</a
+              >
+            </h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.udacity.com/course/data-analyst-nanodegree--nd002"
+                target="_blank"
+                >2. Data Analyst Nanodegree</a
+              >
+            </h3>
+            <p>Provider: Udacity</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"
+                target="_blank"
+                >3. Python for Data Science and Machine Learning</a
+              >
+            </h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.datacamp.com/courses/introduction-to-data-science-in-python"
+                target="_blank"
+                >4. Introduction to Data Science in Python (Free)</a
+              >
+            </h3>
+            <p>Provider: DataCamp</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.coursera.org/specializations/excel-mysql"
+                target="_blank"
+                >5. Excel to MySQL: Analytic Techniques for Business (Free)</a
+              >
+            </h3>
+            <p>Provider: Coursera</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cloud Computing Section -->
+      <div class="field-section">
+        <h2>Cloud Computing</h2>
+        <ul class="course-list">
+          <li>
+            <h3>
+              <a
+                href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+                target="_blank"
+                >1. AWS Certified Solutions Architect – Associate</a
+              >
+            </h3>
+            <p>Provider: Amazon Web Services</p>
+          </li>
+          <li>
+            <h3>
+              <a href="https://cloud.google.com/training" target="_blank"
+                >2. Google Cloud Platform Fundamentals: Core Infrastructure</a
+              >
+            </h3>
+            <p>Provider: Google Cloud</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/"
+                target="_blank"
+                >3. Microsoft Azure Fundamentals</a
+              >
+            </h3>
+            <p>Provider: Microsoft</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://aws.amazon.com/certification/certified-cloud-practitioner/"
+                target="_blank"
+                >4. AWS Certified Cloud Practitioner</a
+              >
+            </h3>
+            <p>Provider: Amazon Web Services</p>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://www.coursera.org/specializations/google-cloud-architecture"
+                target="_blank"
+                >5. Architecting with Google Cloud</a
+              >
+            </h3>
+            <p>Provider: Coursera</p>
+          </li>
+        </ul>
+      </div>
+      <!-- Machine Learning Section -->
+      <div class="field-section">
+        <h2>Machine Learning</h2>
+        <ul class="course-list">
+          <li>
+            <h3><a href="#" target="_blank">1. Machine Learning by Andrew Ng</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">2. Deep Learning Specialization</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3>
+              <a href="#" target="_blank">3. Machine Learning A-Z™: Hands-On Python & R in Data Science</a>
+            </h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">4. AI For Everyone</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">5. Applied Machine Learning</a></h3>
+            <p>Provider: Udacity</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Artificial Intelligence Section -->
+      <div class="field-section">
+        <h2>Artificial Intelligence</h2>
+        <ul class="course-list">
+          <li>
+            <h3><a href="#" target="_blank">1. Artificial Intelligence A-Z™: Learn How To Build An AI</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">2. AI for Everyone</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">3. Artificial Intelligence Nanodegree</a></h3>
+            <p>Provider: Udacity</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">4. Artificial Intelligence: Principles and Techniques</a></h3>
+            <p>Provider: Stanford Online</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">5. Deep Learning for AI</a></h3>
+            <p>Provider: edX</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cybersecurity Section -->
+      <div class="field-section">
+        <h2>Cybersecurity</h2>
+        <ul class="course-list">
+          <li>
+            <h3><a href="#" target="_blank">1. The Complete Cybersecurity Bootcamp</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">2. Cybersecurity Specialization</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">3. CompTIA Security+ Certification</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">4. Introduction to Cybersecurity Tools & Cyber Attacks</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">5. Cybersecurity for Business</a></h3>
+            <p>Provider: edX</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile App Development Section -->
+      <div class="field-section">
+        <h2>Mobile App Development</h2>
+        <ul class="course-list">
+          <li>
+            <h3><a href="#" target="_blank">1. Android App Development for Beginners</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">2. iOS App Development with Swift</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">3. Mobile App Development with Flutter</a></h3>
+            <p>Provider: Udacity</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">4. iOS App Development Nanodegree</a></h3>
+            <p>Provider: Udacity</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">5. React Native - The Complete Guide</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Blockchain Section -->
+      <div class="field-section">
+        <h2>Blockchain</h2>
+        <ul class="course-list">
+          <li>
+            <h3><a href="#" target="_blank">1. Blockchain Basics</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">2. Ethereum and Solidity: The Complete Developer's Guide</a></h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">3. Blockchain Specialization</a></h3>
+            <p>Provider: Coursera</p>
+          </li>
+          <li>
+            <h3>
+              <a href="#" target="_blank">4. Blockchain A-Z™: Learn How To Build Your First Blockchain</a>
+            </h3>
+            <p>Provider: Udemy</p>
+          </li>
+          <li>
+            <h3><a href="#" target="_blank">5. Blockchain for Business</a></h3>
+            <p>Provider: edX</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- About Project Section -->
+        <div class="footer-about">
+          <h3>About RateMyCourse</h3>
+          <p class="intro-text">
+            RateMyCourse is a platform dedicated to helping students navigate
+            the world of online education.
+          </p>
+        </div>
+
+        <!-- Development Team Section -->
+        <div class="footer-team">
+          <h3>Project Development Team</h3>
+          <ul>
+            <li>Lead Developer: Kalluru Jahnavi</li>
+            <li>Project Manager: Siva</li>
+            <li>Content Researcher: HemaSree</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="services.html">Explore Courses</a></li>
+            <li><a href="#reviews">Rate a Course</a></li>
+            <li><a href="blog.html">Community Blogs</a></li>
+            <li><a href="#career-opportunities">Career Opportunities</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links Section -->
+        <div class="footer-social">
+          <h3>Connect with Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png&color=000000"
+                  alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=wqGmdISvpm0c&format=png&color=4AA2C6"
+                  alt="GitHub"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 RateMyCourse. All Rights Reserved.</p>
+        <p>Developed with ❤️ by the RateMyCourse Development Team.</p>
+      </div>
+    </footer>
+    <script src="/static/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

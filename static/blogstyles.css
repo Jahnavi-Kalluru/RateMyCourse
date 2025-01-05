@@ -1,0 +1,98 @@
+.blog-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Blog Page Header */
+.blog-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.blog-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-intro p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Blog Post Grid */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Blog Card Styling */
+.blog-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post-title {
+    font-size: 22px;
+    color: #333;
+    padding: 15px;
+}
+
+.blog-excerpt {
+    font-size: 16px;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+.read-more-btn {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+}
+
+.read-more-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-card {
+        width: calc(50% - 20px); /* Two cards per row for tablet screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-card {
+        width: 100%; /* One card per row for mobile screens */
+    }
+}
+

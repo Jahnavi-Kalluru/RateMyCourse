@@ -1,0 +1,49 @@
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10%;
+    gap: 2rem;
+  }
+  
+  .about-section .content {
+    max-width: 50%;
+  }
+  
+  .about-section h1 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #E3E8FF;
+  }
+  
+  /* Circular Text Effect */
+  .image-container::after {
+    content: "Know Here, Learn Better";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 3px;
+    white-space: nowrap;
+  }

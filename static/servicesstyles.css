@@ -1,0 +1,91 @@
+.course-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Heading */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Field Section (Web Development, Data Analytics, etc.) */
+.field-section {
+  margin-bottom: 40px;
+}
+
+.field-section h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Course List */
+.course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-list li:hover {
+  background-color: #e0f7fa;
+}
+
+.course-list h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.course-list p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 28px;
+  }
+
+  .field-section h2 {
+      font-size: 24px;
+  }
+
+  .course-list h3 {
+      font-size: 18px;
+  }
+
+  .course-list p {
+      font-size: 14px;
+  }
+}
+
+.field-section a{
+  color: inherit; /* Inherits the color from the parent element */
+  text-decoration: none; /* Removes the underline */
+  font-weight: bold; /* You can make the font bold */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition effect */
+}
+
+.field-section a:hover{
+  color: #3498db;
+}
