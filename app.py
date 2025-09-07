@@ -48,6 +48,7 @@ def contact():
 def dashboard():
    return render_template('dashboard.html')
 
+import os
 if __name__ == '__main__':
    port = int(os.environ.get("PORT", 5000))  # use Render's PORT if available
    app.run(host="0.0.0.0", port=port, debug=True)
