@@ -25,21 +25,21 @@ header {
   color: #4f2b2b;
 }
 
-header img{
+header img {
   width: 50px;
   height: 50px;
 }
-.logo{
+.logo {
   font-size: 2em;
   color: #4f2b2b;
   user-select: none;
   display: flex;
   align-items: center;
 }
-.logo img{
+.logo img {
   margin-right: 10px;
 }
-.logo h2{
+.logo h2 {
   margin: 0;
 }
 .navigation {
@@ -106,7 +106,8 @@ header img{
   padding: 10px 20px;
 }
 
-.navigation a, .navigation .btnLogin-popup {
+.navigation a,
+.navigation .btnLogin-popup {
   margin-left: 20px;
 }
 
@@ -154,27 +155,27 @@ header img{
   }
 }
 
- .wrapper{
+.wrapper {
   position: relative;
   width: 400px;
   height: 440px;
   background: whitesmoke;
-  border: 2px solid rgba(255, 255, 255, .5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   transform: scale(0);
-  transition: transform .5s ease, height .2s ease;
+  transition: transform 0.5s ease, height 0.2s ease;
 }
 /*
 .wrapper.active-popup{
   transform: scale(1);
 } */
- /* Overlay for the login form */
+/* Overlay for the login form */
 .overlay {
   position: fixed;
   top: 0;
@@ -213,38 +214,37 @@ header img{
   transform: scale(1);
 }
 
-
-.wrapper.active{
+.wrapper.active {
   height: 520px;
 }
 
-.wrapper .form-box{
+.wrapper .form-box {
   width: 100%;
   padding: 40px;
 }
 
-.wrapper .form-box.login{
-  transition: transform .18s ease;
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
   transform: translateX(0);
 }
 
-.wrapper.active .form-box.login{
+.wrapper.active .form-box.login {
   transition: none;
   transform: translateX(-400px);
 }
 
-.wrapper .form-box.register{
-   position: absolute;
-   transition: none;
-   transform: translateX(400px);
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
 }
 
-.wrapper.active .form-box.register{
-  transition: transform .18s ease;
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
   transform: translateX(0);
 }
 
-.wrapper .icon-close{
+.wrapper .icon-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -260,13 +260,13 @@ header img{
   cursor: pointer;
   z-index: 1;
 }
-.form-box h2{
+.form-box h2 {
   font-size: 2em;
   color: #4f2b2b;
   text-align: center;
 }
 
-.input-box{
+.input-box {
   position: relative;
   width: 100%;
   height: 50px;
@@ -274,7 +274,7 @@ header img{
   margin: 30px 0;
 }
 
-.input-box label{
+.input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -283,31 +283,32 @@ header img{
   color: #4f2b2b;
   font-weight: 500;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-.input-box input:focus~label,.input-box input:valid~label{
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
   top: -5px;
 }
-.input-box input{
+.input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 1em;
-  color:#4f2b2b;
+  color: #4f2b2b;
   font-weight: 600;
-  padding: 0 35px 0 5px; 
+  padding: 0 35px 0 5px;
 }
-.input-box .icon{
+.input-box .icon {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
   color: #4f2b2b;
   line-height: 57px;
 }
-.remember-forgot{
-  font-size: .9em;
+.remember-forgot {
+  font-size: 0.9em;
   color: #4f2b2b;
   font-weight: 500;
   margin: -15px 0 15px;
@@ -315,21 +316,21 @@ header img{
   justify-content: space-between;
 }
 
-.remember-forgot label input{
+.remember-forgot label input {
   accent-color: #4f2b2b;
   margin-right: 3px;
 }
 
-.remember-forgot a{
-  color:#4f2b2b;
+.remember-forgot a {
+  color: #4f2b2b;
   text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
-form .btn{
+form .btn {
   width: 100%;
   height: 45px;
   background-color: #4f2b2b;
@@ -342,21 +343,21 @@ form .btn{
   font-weight: 500;
 }
 
-.login-register{
-  font-size: .9em;
+.login-register {
+  font-size: 0.9em;
   color: #4f2b2b;
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 
-.login-register p a{
+.login-register p a {
   color: #4f2b2b;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
 }
 
@@ -377,15 +378,15 @@ form .btn{
 }
 
 .introduction {
-    column-count: 2;
-    column-gap: 30px;
-    line-height: 1.6;
-    margin-bottom: 1.5em;
-    background-color: #f7f7f7; 
-    padding: 20px;
-    border-left: 4px solid #333; 
-    border-radius: 5px; 
-    text-align: justify;
+  column-count: 2;
+  column-gap: 30px;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-left: 4px solid #333;
+  border-radius: 5px;
+  text-align: justify;
 }
 
 .carousel-inner {
@@ -395,7 +396,7 @@ form .btn{
   max-height: 70vh; /* Set maximum height of the carousel */
   margin: 0 auto; /* Center the carousel horizontally */
   border-radius: 0px;
-} 
+}
 
 .carousel-inner img {
   height: auto;
@@ -425,7 +426,10 @@ form .btn{
   margin-bottom: 20px;
 }
 
-.footer-about, .footer-team, .footer-links, .footer-social {
+.footer-about,
+.footer-team,
+.footer-links,
+.footer-social {
   padding: 0 20px;
 }
 
@@ -434,12 +438,14 @@ form .btn{
   line-height: 1.6;
 }
 
-.footer-team ul, .footer-links ul {
+.footer-team ul,
+.footer-links ul {
   list-style-type: none;
   padding: 0;
 }
 
-.footer-team ul li, .footer-links ul li {
+.footer-team ul li,
+.footer-links ul li {
   margin-bottom: 10px;
 }
 
@@ -487,7 +493,6 @@ form .btn{
   }
 }
 
-
 .feedback-container {
   max-width: 600px;
   margin: 20px auto;
@@ -504,4 +509,40 @@ form .btn{
 
 .feedback-container .form-label {
   font-weight: bold;
+}
+
+#signoutBtn {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #4f2b2b;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4f2b2b;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  text-align: center;
+}
+
+#signoutBtn:hover {
+  background: #4f2b2b;
+  color: #fff;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and button */
+  margin-left: 40px;
+}
+
+.user-icon {
+  font-size: 28px;
+  color: #4f2b2b;
+  cursor: pointer;
 }

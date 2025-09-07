@@ -3,36 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RateMyCourse</title>
-    <link rel="stylesheet" href="./static/styles.css" />
+    <title>RateMyCourse - Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="logo">
-        <img src="./static/logo.png">
-        <h2>RateMycourse</h2>
+        <img src="/static/logo.png" />
+        <h2>RateMyCourse</h2>
       </div>
       <nav class="navigation">
-        <a href="index.html" id="home-link">Home</a>
-        <a href="about.html" id="about-link">About</a>
-        <a href="services.html" id="services-link">Services</a>
-        <a href="blog.html" id="blog-link">Blog</a>
-        <button class="btnLogin-popup" value="signoutBtn" id="signoutBtn">SignOut</button>
+        <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+        <a href="/user/signout" class="btnLogin-popup" id="signoutBtn"
+          >SignOut</a
+        >
       </nav>
     </header>
-    <div></div>
+
+    <!-- Carousel -->
     <div class="carousel">
       <div
         id="carouselExampleControls"
@@ -68,8 +67,7 @@
           data-bs-target="#carouselExampleControls"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button
           class="carousel-control-next"
@@ -77,86 +75,120 @@
           data-bs-target="#carouselExampleControls"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon"></span>
         </button>
       </div>
     </div>
-    <div></div>
-    <div class="container">
-      <h1>Welcome to <strong>RateMyCourse</strong></h1>
-      <div class="introduction">
-        <p>
-          Navigating the world of online education can be overwhelming. With
-          countless courses available, how do you know which ones are truly
-          worth your time? <strong>RateMyCourse</strong> is here to simplify
-          your learning journey. We bring together the best courses, trusted
-          reviews, and essential career resources—all in one place.
-        </p>
-        <p>
-          At <strong>RateMyCourse</strong>, we believe that learning should be
-          as rewarding as it is accessible. Whether you’re looking to upskill,
-          pivot your career, or explore new interests, our platform is designed
-          to help you find the right courses that align with your goals. Not
-          only can you discover and enroll in popular and high-quality courses,
-          but you can also read and share blogs, rate your learning experiences,
-          and connect with a community of like-minded learners.
-        </p>
-        <p>
-          But that’s not all—<strong>RateMyCourse</strong> goes beyond just
-          learning. We integrate job opportunities and career guidance tailored
-          to your skills, helping you bridge the gap between education and
-          employment. Join us and take control of your educational journey with
-          confidence.
-        </p>
-        <p>
-          <strong
-            >Start exploring today, and let RateMyCourse be your guide to
-            achieving your learning and career aspirations!</strong
-          >
-        </p>
+
+    <!-- Dashboard Content -->
+    <div class="container mt-5">
+      <!-- Welcome -->
+      <h1 class="text-center">
+        👋 Welcome, <strong>{{ session['user']['name'] }}</strong>!
+      </h1>
+      <p class="text-center text-muted">
+        Here’s a quick look at your learning journey.
+      </p>
+
+      <!-- Stats Section -->
+      <div class="row text-center mt-4">
+        <div class="col-md-4">
+          <div class="card shadow p-3">
+            <h3>5</h3>
+            <p>Courses Rated</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow p-3">
+            <h3>3</h3>
+            <p>Feedback Submitted</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow p-3">
+            <h3>2</h3>
+            <p>Blogs Posted</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <h2>Problem statement</h2>
-        <p id="problem-statement">
-          In the current digital age, students are overwhelmed by the vast array
-          of online courses, career resources, and educational content available
-          on various platforms. However, despite this abundance of information,
-          students often struggle to find the most suitable courses that align
-          with their career goals, receive reliable feedback on course quality,
-          and access resources that can effectively guide their learning and
-          professional development.Moreover, existing platforms lack a
-          comprehensive solution that not only helps students discover popular
-          and high-quality courses but also provides them with opportunities to
-          connect with peers, share their learning experiences through blogs,
-          and access relevant job opportunities. The absence of an integrated
-          platform that addresses these needs results in students spending
-          excessive time and effort navigating multiple websites, leading to
-          inefficiencies in their learning journey.
-        </p>
+
+      <!-- Rate a Course -->
+      <div class="mt-5">
+        <h2>⭐ Rate a Course</h2>
+        <form action="/user/rate" method="POST" class="row g-3">
+          <div class="col-md-6">
+            <input
+              type="text"
+              name="course_name"
+              class="form-control"
+              placeholder="Course Name"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" name="rating" required>
+              <option value="">Select Rating</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+          </div>
+          <div class="col-md-9">
+            <textarea
+              name="review"
+              class="form-control"
+              rows="3"
+              placeholder="Write your review..."
+            ></textarea>
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </div>
+        </form>
       </div>
-      <div></div>
+
+      <!-- Recent Feedback -->
+      <div class="mt-5">
+        <h2>📝 Your Recent Feedback</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-3">
+              <h5>Course: Python Basics</h5>
+              <p>⭐⭐⭐⭐ - Great course for beginners!</p>
+              <small class="text-muted">Submitted on Jan 5, 2025</small>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-3">
+              <h5>Course: AWS Cloud</h5>
+              <p>⭐⭐⭐ - Good content but could use more projects.</p>
+              <small class="text-muted">Submitted on Feb 10, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer (kept same as your base design) -->
     <footer id="footer">
       <div class="footer-container">
-        
-        <!-- About Project Section -->
         <div class="footer-about">
           <h3>About RateMyCourse</h3>
-          <p class="intro-text">RateMyCourse is a platform dedicated to helping students navigate the world of online education.</p>
+          <p>
+            RateMyCourse is a platform dedicated to helping students navigate
+            the world of online education.
+          </p>
         </div>
-    
-        <!-- Development Team Section -->
         <div class="footer-team">
           <h3>Project Development Team</h3>
           <ul>
             <li>Lead Developer: Kalluru Jahnavi</li>
             <li>Project Manager: Siva</li>
-            <li>Content Researcher: HemaSree </li>
+            <li>Content Researcher: HemaSree</li>
           </ul>
         </div>
-    
-        <!-- Quick Links Section -->
         <div class="footer-links">
           <h3>Quick Links</h3>
           <ul>
@@ -166,27 +198,47 @@
             <li><a href="#career-opportunities">Career Opportunities</a></li>
           </ul>
         </div>
-    
-        <!-- Social Media Links Section -->
         <div class="footer-social">
           <h3>Connect with Us</h3>
           <ul class="social-icons">
-            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook"></a></li>
-            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png&color=000000" alt="Twitter"></a></li>
-            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn"></a></li>
-            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=wqGmdISvpm0c&format=png&color=4AA2C6" alt="GitHub"></a></li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=118497&format=png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png"
+                  alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=13930&format=png"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=wqGmdISvpm0c&format=png"
+                  alt="GitHub"
+              /></a>
+            </li>
           </ul>
         </div>
-        
       </div>
-    
-      <!-- Copyright Section -->
       <div class="footer-bottom">
         <p>&copy; 2024 RateMyCourse. All Rights Reserved.</p>
         <p>Developed with ❤️ by the RateMyCourse Development Team.</p>
       </div>
     </footer>
-    <script src="./static/script.js"></script>
+
+    <script src="/static/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
